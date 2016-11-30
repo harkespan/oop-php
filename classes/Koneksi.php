@@ -1,17 +1,13 @@
 <?php
-	Class Koneksi
-	{
-		function __constuct()
-		{
 			try{
-				$this->db = new PDO("mysql:localhost;dbname=test","root","");
+				$db = new PDO("mysql:localhost;dbname=test","root","");
+				// $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			}
 			catch(PDOException $e)
 			{
 				echo $e->getMessage();
 			}
-		}
-	}
+
 
 
 ?>
