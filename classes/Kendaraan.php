@@ -1,5 +1,4 @@
 <?php
-	// include("Koneksi.php");
 	class Kendaraan
 	{
 		function __construct()
@@ -19,9 +18,9 @@
 			return $rs;
 		}
 
-		function simpankendaraan($nama,$warna,$tahun)
+		function simpankendaraan($nama,$warna,$tahun,$file)
 		{
-			mysqli_query($this->a,"INSERT INTO kendaraan (nama,warna,tahun) VALUES ('".$nama."','".$warna."','".$tahun."')");
+			mysqli_query($this->a,"INSERT INTO kendaraan (nama,warna,tahun,files) VALUES ('".$nama."','".$warna."','".$tahun."','".$file."')");
 		}
 
 		function delKendaraan($id)
