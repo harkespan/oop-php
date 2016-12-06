@@ -7,8 +7,13 @@
 	$nama = $_POST['nama'];
 	$thn = $_POST['tahun'];
 	$wrn = $_POST['warna'];
+	$nf =  $_FILES['userfile']['tmp_name'];
+	$real = $_FILES['userfile']['name'];
+	
+	move_uploaded_file($nf, '../uploads/'.$_FILES['userfile']['name']);
 
-	$act->simpankendaraan($nama,$wrn,$thn);
+	$act->simpankendaraan($nama,$wrn,$thn,$real);
+	#print_r($_FILES);
 
 	header("Location:read.php");
 
